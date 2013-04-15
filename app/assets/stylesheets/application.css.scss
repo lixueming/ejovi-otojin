@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree . 
+ */
+
+ 
+h1, h2, h3, h4, h5, h6, button{
+	font-family: "Myriad Pro";
+}
+a {
+	cursor: pointer;
+}
+.hr-row {
+	height: 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	border-top-color: #aaa;
+}
+
+.navbar.navbar-fixed-top.navbar-inverse {
+	.navbar-inner {
+		background: none;
+		background-color: #313131 !important;
+		.container {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			.nav-collapse.collapse {
+				ul.nav {
+					li {						
+						border-radius: 3px 3px 3px 3px;
+						background-color: #262626;
+						margin-left: 1px;
+						a {
+
+						}
+					}
+				}
+				ul.nav.pull-right {
+					height: 40px;
+					li {
+						width: 35px;
+						margin-left: 7px;
+						background-color: #414141;
+						a {
+							padding-left: 10px;
+						}
+						form.navbar-form.pull-right {
+							input {
+								text-align: left;
+							}
+						}
+					}
+					li.search {
+						width: 210px;
+						margin-left: 15px;
+						background: none;
+						form {
+							input {
+								border-color: #444;
+								margin-top: 4px;
+								width: 200px;
+								background-color: #262626;
+								color: #999;
+							}
+						}
+					}				
+				}
+			}
+		}
+	}
+}
+
+footer{
+	background-color: #ececec;
+	.container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		span.copyright {
+			float: left;
+		}
+
+		span.footer-link{
+			float: right;				
+		}
+	}
+}

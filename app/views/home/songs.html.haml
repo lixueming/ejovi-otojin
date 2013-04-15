@@ -1,0 +1,82 @@
+.row.desktop-songs
+	.row-fluid.heading
+		.container
+			%h1 browse music
+	.container
+		.row.content
+			.span8.left-content
+				.row-fluid.most-tab
+					%ul.nav.nav-pills
+						%li.active
+							%a Most Popular
+						%li
+							%a Most Recent
+						%li
+							%a Top Downloads
+				.row-fluid.filter
+					%span Filter
+					.btn-group
+						%button.btn{style: "width: 200px;"} One
+						%button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+							%span.caret
+						%ul.dropdown-menu
+							%li
+								%a One
+							%li
+								%a Two
+							%li
+								%a Three
+				.row-fluid.most-list
+					%ul.thumbnails
+						- for popular in 1...13
+							%li.span12
+								%span.span1.num-badge
+									= popular
+								.span8
+									%a.thumbnail.pull-right
+										= image_tag "popular2.png"
+									.caption
+										%a Album Name goes here
+										%br
+										%p
+											by Bryan Adams /
+											%span.verified Verified</span>
+										%span.plays 106,451 plays - rock
+								.span3
+									%p.pull-right										
+										%i.icon-heart
+										%span 2,333
+				.row-fluid.pagination
+					%center
+						%ul
+							%li
+								%a <<
+							%li
+								%a 1
+							%li
+								%a 2
+							%li.active
+								%a 3
+							%li
+								%a 4
+							%li
+								%a 5
+							%li
+								%a >>
+			.span4.right-content
+				.row-fluid.currently-listening
+					%h3 Currently Listening
+					%ul.thumbnails
+						- currentlyListening = ["popular4.png", "popular5.png", "popular1.png", "popular2.png", "popular3.png", "popular2.png", "popular3.png"]
+
+						- currentlyListening.each do |artist|
+							%li.span12
+								%a.thumbnail
+									= image_tag artist
+								.caption
+									%p
+										%b OptimistSheba
+										is listening to: Nobody's Business @Rihanna Ft. 
+										%a @chrisBrown
+										(TSoul & @Anhayla Cover) by
+										%a TSoul

@@ -1,0 +1,41 @@
+.row.desktop-about-us
+	.row-fluid.heading
+		.container
+			%h1 who's behind otojin
+			%p
+				otojin is created by a top list of industry experts and professionals
+	.container
+		.row-fluid.content
+			.row-fluid.most-list
+				%ul.thumbnails
+					- mostArtists = [{heading:"Sadahiko Hirose", img:"featured1.png"}, {heading:"Ejovi Nuwere", img:"featured2.png"}, {heading:"Heading/Name", img:"featured1.png"}]
+					- mostArtists.each do |artist|
+						%li.span12
+							%a.thumbnail
+								= image_tag artist[:img]
+							.caption
+								%h3= artist[:heading]
+								%a Co-Founder
+								%br
+								%p
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus nisi vel lacus viverra at posuere metus moles. Mauris vel urna tincidunt turpis blandit gravida. Cras convallis viverra tempus. Donec a magna elit, vel pellentesque sapien. Etiam accumsan purus eget nisl ultrices molestie.
+									
+								%ul.nav.nav-pills#artist-social-group
+									%li
+										%a.icon-facebook{href: "http://facebook.com"}
+									%li
+										%a.icon-twitter{href: "http://twitter.com"}
+									%li
+										%a.icon-google-plus{href: "http://google.com"}
+
+			.row-fluid.advisers
+				%h4 Advisers
+				%ul.thumbnails
+					- imgs = ["featured1.png", "featured2.png", "featured1.png"]
+					- imgs.each do |img|
+						%li.span4
+							.thumbnail
+								= image_tag (img)
+								.caption
+									%h5 Heading will be appear here
+									%p Lorem ipsum doler tight sight

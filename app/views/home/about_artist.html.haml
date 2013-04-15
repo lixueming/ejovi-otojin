@@ -1,0 +1,76 @@
+.row.desktop-about-artist
+	.row-fluid.heading
+		.container							
+			%h1.span6	About Artist
+			.span6
+				%p.pull-right
+					%button.btn.btn-large.btn-inverse
+						%i.icon-heart
+						Become a fan
+
+					%button.btn.btn-large.btn-inverse
+						%i.icon-twitter
+						Follow
+					%button.btn.btn-large.btn-inverse Button
+	.container
+		.row.content
+			.span8.left-content
+				.row-fluid.banner
+					.span12
+						= image_tag "qa_artist3.png", class: 'small-photo'
+						%h2 Jessica Churner		
+
+				.row-fluid.songs
+					%h3 Songs
+					%hr.hr-row
+
+					%ul.thumbnails
+						- songs = [{song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}, {song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}, {song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}]
+
+						- songs.each do |song|
+							%li.span12
+								%p 
+									%i.icon-play
+									%b= song[:song]										
+									%span.song= " - Love Me " + song[:plays] + " plays"
+			.span4.right-content
+				.row-fluid.about
+					%h3 About
+					%hr.hr-row
+					%h4 BIO
+					%p
+						lorem / ipsum 2013 dummy text (final 20) No. 1 <br>lorem on @otijin / Dl#lorem ipsum /dummy<br>@ managment
+					%p
+						%i.icon-flag
+						S E london, United Kingdom
+					%p
+						%i.icon-globe
+						%a www.jessicademo.com
+					.span4.well{style:"margin-left: 0px;"}
+						%h5 88
+						%p Fans
+					.span4.well
+						%h5 4753
+						%p Following
+					.span4.well
+						%h5 28963
+						%p Followers
+				.row-fluid.newest-fans
+					%h3 Newest fans
+					%hr.hr-row
+					%p
+						- for fans in 1...6
+							%a.thumbnail
+								= image_tag "popular2.png"
+					%p
+						- for fans in 1...6
+							%a.thumbnail
+								= image_tag "popular3.png"
+					%p
+						- for fans in 1...6
+							%a.thumbnail
+								= image_tag "popular4.png"
+					%p
+						- for fans in 1...6
+							%a.thumbnail
+								= image_tag "popular1.png"

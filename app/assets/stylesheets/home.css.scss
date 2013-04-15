@@ -1,0 +1,596 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+span.verified {
+	color: #569e67;
+}
+
+span.num-badge {
+	border-radius: 20px 20px 20px 20px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: #ccc;
+	padding-top: 7px;
+	
+	font-size: 200;
+	margin-top: 10px;
+	font-weight: bold;
+	color: #444;
+}
+
+
+ul.nav.nav-pills#artist-social-group{
+	margin-bottom: 10px;
+	li {
+		border-style: solid;
+		border-width: 1px 1px 1px 1px;
+		border-color: #ddd;
+		margin-left: 3px;
+		height: 20px;
+		width: 40px;
+
+		a.icon-facebook{
+			color: #1b5ab0;
+		}
+		a.icon-twitter{
+			color: #008dde;
+		}
+		a.icon-google-plus{
+			color: #e22a2a;
+		}
+
+	}	
+}
+
+.row.desktop-home {
+	.container {
+		.row.banner{
+			background: image_url("home_banner.png") no-repeat 0 0;
+			height: 344px;
+			width: 1250px;
+
+			h1{
+				margin-top: 180px;
+				font-size: 420%;
+				color: white;
+				text-align: center;
+				font-weight: 900;
+			}
+			p {
+				margin-top: 20px;
+				color: #908f8f;
+				text-align: center;
+				font-size: 135%;
+				line-height: 1.3em;
+			}
+			button.btn.btn-large.btn-primary {
+				margin-top: 23px;
+				font-weight: 900;
+				width: 180px;
+
+			}
+		}
+
+		.row.content {
+			margin-top: 50px;
+			h3 {
+				font-weight: 900;
+			}
+			h5 {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			p {
+				margin-top: 0px;
+				margin-bottom: 0px;
+				color: #828282;
+			}
+			.left-content {
+				.row-fluid.featured {
+					h3 {
+					}
+					ul.thumbnails {
+						li.span6 {
+							.thumbnail {						
+								.caption {
+
+								}
+							}
+						}
+					}
+				}
+			}
+			.right-content {
+				.row-fluid.popular-artists {
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border: solid 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 20px;
+							margin-left: 0px;
+							a.thumbnail {
+								float: left;
+								margin-right: 15px;	
+							}
+								
+							.caption {
+								h5 {
+
+								}
+								p {
+
+								}
+							}
+							span.span2 {
+								text-align: center;
+								background-color:  #f4f4f4;
+								padding-top: 15px;
+								padding-bottom: 15px;
+								font-size: 200;
+								font-weight: bold;
+								color: #008dde;
+							}
+						}
+					}
+				}
+				.row-fluid.currently-listening {
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border: solid 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 20px;
+							margin-left: 0px;
+							a.thumbnail {
+								float: left;
+								margin-right: 15px;
+							}
+							.caption {
+								p{
+									color: #222;
+								}
+							}									
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.row.desktop-artists {
+	.row-fluid.heading{
+			
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-bottom: 20px;
+
+			background-color: #008dde;			
+
+		.container {
+			h1{
+				font-size: 300%;
+				color: white;
+				font-weight: 900;
+			}
+			.span6 {
+				padding-top: 10px;
+				p {
+					padding-top: 10px;
+					margin-bottom:0px;
+				}
+			}
+		}
+	}
+	.container {			
+		.content {
+			margin-top: 30px;
+			.left-content {
+				.row-fluid.filter {
+					background-color: #ececec;
+					padding: 15px 0px 15px 20px;
+					width: 98%;
+
+					span {
+
+					}
+					.btn-group {						
+						margin-left: 20px;
+					}
+				}
+				.row-fluid.most-list {
+					margin-top: 20px;
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border: solid 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 15px;
+							margin-bottom: 10px;
+							margin-top: 5px;
+							margin-left: 0px;
+							.caption {
+								p {
+									margin-bottom: 0px;
+								}
+								span {
+									color: #888;
+								}
+							}
+							.span8
+								a{
+									float:left;
+									margin-right: 15px;
+								}
+								.caption {
+								}
+							.span3 {
+							}
+						}
+					}
+				}
+			}
+			.right-content {
+				.popular-twitter {
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 15px;
+							margin-bottom: 15px;
+							margin-left: 0px;
+							a.thumbnail {
+								float: left;
+								margin-right: 15px;	
+							}
+							.caption {
+								p{
+									color: #888;
+								}
+							}									
+						}
+					}				
+				}
+			}			
+		}
+	}
+}
+
+.row.desktop-about-artist {
+	.row-fluid.heading{			
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-bottom: 20px;
+			background-color: #008dde;			
+
+		.container {
+			h1{
+				font-size: 300%;
+				color: white;
+				font-weight: 900;
+			}
+		}
+	}
+	.container {			
+		.content {			
+			margin-top: 30px;
+			margin-bottom: 40px;
+			.left-content {
+				.row-fluid.banner {
+					.span12 {
+						background: url("qa_artist1.png");
+						height: 300px;
+					}	
+					img.small-photo {
+						pogition: relative;
+						z-index: 10;
+						width: 150px;
+						height: 120px;
+						border-style: solid;
+						border-color: #fff;
+						border-width: 3px;
+						float:left;
+						margin-right: 10px;
+						margin-top: 140px;
+						margin-left: 30px;
+						border-radius: 4px 4px 4px 4px;
+
+					}
+					h2{
+
+						pogition: relative;
+#						border-style: solid;
+#						border-color: #000;
+#						border-width: 2px 0px 0px 0px;
+
+
+
+						margin-top: 210px;
+						padding-left: 15px;
+						padding-top: 5px;
+						height: 85px;
+
+						
+						#opacity: 0.8;
+#						filter:alpha(opacity=80);
+						background: rgba( 0,0,0, .4 );
+						color: #fff;
+						z-index: -1;
+					}
+
+				}
+				.row-fluid.songs {
+					margin-top: 30px;
+					h3 {
+						margin-bottom: 0px;
+					}
+					hr {
+
+					}
+
+					ul.thumbnails{
+						margin-top: 20px;
+						li {
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 10px;
+							margin-bottom: 10px;
+							margin-left: 0px;
+							p{
+								i { color: #088bd7; }
+								b {
+									color: #444;
+								}
+								span {
+									color: #777;
+								}
+							}
+						}
+					}
+				}
+			}
+			.right-content {
+				.row-fluid.about{
+					h3 {
+						margin-top: 0px;
+						margin-bottom: 0px;
+					}
+					
+					h4{
+						color: #999;
+					}
+					.span4.well{
+						margin-top: 30px;
+						height: 60px;
+						padding-top: 0px;
+						h5{
+							text-align: center;
+							margin-bottom: 0px;
+						}
+						p{
+							text-align: center;
+						}
+					}
+				}	
+				.row-fluid.newest-fans{
+					h3{
+						margin-bottom: 0px;
+					}
+					hr{
+						margin-bottom: 20px;
+					}
+					p {
+						margin-bottom: 0px;
+						
+						a.thumbnail{
+							float: left;
+							margin-right: 2px;
+							padding: 3px;
+							margin-bottom: 7px;
+						}
+					}
+				}
+			}			
+		}
+	}
+}
+
+
+.row.desktop-songs {
+	.row-fluid.heading{
+			
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-bottom: 20px;
+
+			background-color: #008dde;			
+
+		.container {
+			h1{
+				font-size: 300%;
+				color: white;
+				font-weight: 900;
+			}
+			.span6 {
+				padding-top: 10px;
+				p {
+					padding-top: 10px;
+					margin-bottom:0px;
+				}
+			}
+		}
+	}
+	.container {			
+		.content {
+			margin-top: 30px;
+			.left-content {
+				.row-fluid.filter {
+					background-color: #ececec;
+					padding: 15px 0px 15px 20px;
+					width: 98%;
+
+					span {
+
+					}
+					.btn-group {						
+						margin-left: 20px;
+					}
+				}
+				.row-fluid.most-list {
+					margin-top: 20px;
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border: solid 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 15px;
+							margin-bottom: 10px;
+							margin-top: 5px;
+							margin-left: 0px;
+
+							.span8
+								a{
+									float:left;
+									margin-right: 15px;
+								}
+								.caption {
+									p {
+										margin-bottom: 0px;
+									}
+									span.plays {
+										color: #888;
+									}
+								}
+							.span3 {
+								p {
+									i {
+										color: red;										
+									}
+
+									span {
+										font-size: 200;
+
+										font-weight: bold;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+
+	
+			.right-content {
+				.row-fluid.currently-listening {
+					ul.thumbnails{
+						li{
+							border-style: solid;
+							border-width: 0px 0px 1px 0px;
+							border: solid 0px 0px 1px 0px;
+							border-color: #ccc;
+							padding-bottom: 20px;
+							margin-left: 0px;
+							a.thumbnail {
+								float: left;
+								margin-right: 15px;
+							}
+							.caption {
+								p{
+									color: #222;
+								}
+							}									
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.row.desktop-about-us {
+	.row-fluid.heading{			
+			padding-top: 20px;
+			padding-left: 10px;
+			padding-bottom: 20px;
+
+			background-color: #008dde;			
+
+		.container {
+			h1{
+				font-size: 250%;
+				color: white;
+				font-weight: 900;
+			}
+			p {
+				color: #ddd;
+			}
+		}
+	}
+	.container {			
+		.content {
+			margin-top: 30px;
+			.row-fluid.most-list {
+				margin-top: 20px;
+				ul.thumbnails{
+					li{
+						border-style: solid;
+						border-width: 0px 0px 1px 0px;
+						border: solid 0px 0px 1px 0px;
+						border-color: #ccc;
+						padding-bottom: 15px;
+						margin-bottom: 10px;
+						margin-top: 10px;
+						margin-left: 0px;
+
+						a{
+							float:left;
+							margin-right: 15px;
+						}
+						.caption {
+							h3 {
+								margin-top: 0px;
+								margin-bottom: 0px;
+							}
+							a {
+								font-size: 120%;
+								font-weight: bold;								
+							}
+							p {
+								margin-top: 10px;
+								color: #888;
+							}
+						}
+					}
+				}
+			}
+
+			.row-fluid.advisers {
+				margin-top: 20px;
+				h5 {
+					margin-top: 0px;
+					margin-bottom: 0px;
+				}
+				p {
+					margin-top: 0px;
+					margin-bottom: 0px;
+					color: #828282;
+				}
+			}
+		}
+	}
+}
+
+
