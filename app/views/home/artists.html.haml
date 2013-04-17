@@ -27,29 +27,25 @@
 							%li
 								%a Three
 				.row-fluid.most-list
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- mostPopular = [{img:"popular2.png", heading:"Jhon Doe", type:"rap", followers: "902,500", badge:"1"}, {img:"popular3.png", heading:"Dennish Da Man", type:"rap", followers: "3,552,479", badge:"2"}, {img:"popular1.png", heading:"Dave Ruiz", type:"pop", followers: "4,629,183", badge:"3"}, {img:"popular2.png", heading:"Jhordan Loe", type:"pop", followers: "902,500", badge:"4"}, {img:"popular1.png", heading:"Dany Duchaine", type:"pop", followers: "902,500", badge:"5"}, {img:"popular3.png", heading:"Bill S Kenney", type:"rap", followers: "902,500", badge:"6"}, {img:"popular2.png", heading:"Jhon Smith", type:"rap", followers: "902,500", badge:"7"}, {img:"popular1.png", heading:"Lerry Dennish", type:"pop", followers: "1,166,535", badge:"8"}, {img:"popular2.png", heading:"David Sans", type:"rap", followers: "902,500", badge:"9"}, {img:"popular1.png", heading:"Radyj.Le", type:"rap", followers: "3,159,072", badge:"10"}, {img:"popular3.png", heading:"Dany Duchaine", type:"pop", followers: "4,302,415", badge:"11"}, {img:"popular2.png", heading:"Randyj.Le", type:"pop", followers: "902,500", badge:"12"}]
 
 						- mostPopular.each do |popular|					
 							%li.span12
-								%span.span1.num-badge
+								%span.num-badge
 									= popular[:badge]
-								.span8
-									%a.thumbnail.pull-right
-										= image_tag popular[:img]
-									.caption
-										= link_to popular[:heading], home_about_artist_path
-										%br
-										%p= popular[:type]
-										%span= "Followers: " + popular[:followers]
-								.span3
-									%ul.nav.nav-pills.pull-right#artist-social-group
-										%li
-											%a.icon-facebook{href: "http://facebook.com"}
-										%li
-											%a.icon-twitter{href: "http://twitter.com"}
-										%li
-											%a.icon-google-plus{style:"color: red;", href: "http://google.com"}
+								%a.thumbnail
+									= image_tag popular[:img]
+								.caption
+									= link_to popular[:heading], home_about_artist_path
+									%br
+									%p= popular[:type]
+									%span= "Followers: " + popular[:followers]
+
+									.artist-social-group.pull-right
+										%a.icon-facebook{href: "http://facebook.com"}
+										%a.icon-twitter{href: "http://twitter.com"}
+										%a.icon-google-plus{style:"color: red;", href: "http://google.com"}
 				.row-fluid.pagination
 					%center
 						%ul
@@ -70,7 +66,7 @@
 			.span4.right-content
 				.row-fluid.popular-twitter
 					%h3 Popular Twitter
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- popularTwitter = [{img:"popular4.png", heading:"VictoriaJustice", followers:"7,976"},{img:"popular5.png", heading:"souljaboy", followers:"2,976"},{img:"popular1.png", heading:"SeanKingston", followers:"4,976"},{img:"popular2.png", heading:"SheRonaaa", followers:"2,976"},{img:"popular3.png", heading:"HajdarovicDj", followers:"1,976"},{img:"popular2.png", heading:"Azrul_Himee", followers:"2,976"},{img:"popular3.png", heading:"Jason_mraz", followers:"2,454"}]
 
 						- popularTwitter.each do |twitter|
@@ -79,4 +75,4 @@
 									= image_tag twitter[:img]
 								.caption
 									%h5= twitter[:heading]
-									%p= twitter[:followers] + " followers"
+									%span= twitter[:followers] + " followers"

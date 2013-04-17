@@ -27,23 +27,22 @@
 							%li
 								%a Three
 				.row-fluid.most-list
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- for popular in 1...13
 							%li.span12
-								%span.span1.num-badge
+								%span.num-badge
 									= popular
-								.span8
-									%a.thumbnail.pull-right
-										= image_tag "popular2.png"
-									.caption
-										%a Album Name goes here
-										%br
-										%p
-											by Bryan Adams /
-											%span.verified Verified</span>
-										%span.plays 106,451 plays - rock
-								.span3
-									%p.pull-right										
+								%a.thumbnail
+									= image_tag "popular2.png"
+								.caption
+									%a.title Album Name goes here
+									%br
+									%p.by
+										by Bryan Adams /
+										%span.verified Verified</span>
+									%span.plays 106,451 plays - rock
+
+									.pull-right
 										%i.icon-heart
 										%span 2,333
 				.row-fluid.pagination
@@ -66,7 +65,7 @@
 			.span4.right-content
 				.row-fluid.currently-listening
 					%h3 Currently Listening
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- currentlyListening = ["popular4.png", "popular5.png", "popular1.png", "popular2.png", "popular3.png", "popular2.png", "popular3.png"]
 
 						- currentlyListening.each do |artist|
@@ -76,7 +75,7 @@
 								.caption
 									%p
 										%b OptimistSheba
-										is listening to: Nobody's Business @Rihanna Ft. 
-										%a @chrisBrown
+										is listening to: Nobody's<br>Business @Rihanna Ft. 
+										%a @chrisBrown<br>
 										(TSoul & @Anhayla Cover) by
 										%a TSoul

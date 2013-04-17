@@ -7,7 +7,7 @@
 	.container
 		.row-fluid.content
 			.row-fluid.most-list
-				%ul.thumbnails
+				%ul.thumbnails.thumb-list
 					- mostArtists = [{heading:"Sadahiko Hirose", img:"featured1.png"}, {heading:"Ejovi Nuwere", img:"featured2.png"}, {heading:"Heading/Name", img:"featured1.png"}]
 					- mostArtists.each do |artist|
 						%li.span12
@@ -17,16 +17,15 @@
 								%h3= artist[:heading]
 								%a Co-Founder
 								%br
-								%p
+								%p{style: "margin-top: 10px; color: #888;"}
 									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus nisi vel lacus viverra at posuere metus moles. Mauris vel urna tincidunt turpis blandit gravida. Cras convallis viverra tempus. Donec a magna elit, vel pellentesque sapien. Etiam accumsan purus eget nisl ultrices molestie.
 									
-								%ul.nav.nav-pills#artist-social-group
-									%li
-										%a.icon-facebook{href: "http://facebook.com"}
-									%li
-										%a.icon-twitter{href: "http://twitter.com"}
-									%li
-										%a.icon-google-plus{href: "http://google.com"}
+								.artist-social-group{style: "margin-top: 10px;"}
+									%a.icon-facebook{href: "http://facebook.com"}
+
+									%a.icon-twitter{href: "http://twitter.com"}
+
+									%a.icon-google-plus{href: "http://google.com"}
 
 			.row-fluid.advisers
 				%h4 Advisers

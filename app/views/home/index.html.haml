@@ -1,6 +1,7 @@
 .row.desktop-home
 	.container
 		.row.banner
+
 			%h1 music made social
 			%p The social media marketing and entertainment platform for musicians that want to gain fans <br> and spread their sound to the world	
 			%center
@@ -65,23 +66,24 @@
 			.span4.right-content
 				.row-fluid.popular-artists
 					%h3 Popular Artists
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- popularArtists = [{img:"popular4.png", heading:"Michael Anderson", badge:"9.4"}, {img:"popular5.png", heading:"John Doe", badge:"9.7"}, {img:"popular1.png", heading:"Sunil Joshi", badge:"9.1"}, {img:"popular2.png", heading:"Michael Jackson", badge:"8.8"}, {img:"popular3.png", heading:"Jonny Doe", badge:"8.3"}, {img:"popular3.png", heading:"Jonny Doe", badge:"8.3"}, {img:"popular3.png", heading:"Jonny Doe", badge:"8.3"}]
 
 						- popularArtists.each do |artist|					
 							%li.span12
-								.span10
-									%a.thumbnail
-										= image_tag artist[:img]
-									.caption
-										%h5= artist[:heading]
-										%p 9,390,037 followers
-										%span.verified Verified
-								%span.span2= artist[:badge]
+								%a.thumbnail
+									= image_tag artist[:img]
+								.caption
+									%h5= artist[:heading]
+									%p 9,390,037 followers
+									%span.verified Verified
+
+									.pull-right
+										%span.popular= artist[:badge]
 
 				.row-fluid.currently-listening
 					%h3 Currently Listening
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- currentlyListening = ["popular4.png", "popular5.png", "popular1.png", "popular2.png", "popular3.png", "popular2.png", "popular3.png"]
 
 						- currentlyListening.each do |artist|
@@ -89,9 +91,9 @@
 								%a.thumbnail
 									= image_tag artist
 								.caption
-									%p
+									%p{style: "color:#444;"}
 										%b OptimistSheba
 										is listening to: Nobody's Business @Rihanna Ft. 
-										%a @chrisBrown
+										%a @chrisBrown<br>
 										(TSoul & @Anhayla Cover) by
 										%a TSoul

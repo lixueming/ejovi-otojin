@@ -24,12 +24,12 @@
 					%h3 Songs
 					%hr.hr-row
 
-					%ul.thumbnails
+					%ul.thumbnails.thumb-list
 						- songs = [{song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}, {song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}, {song:"Jessica Churner", plays:"46,249"}, {song:"Jessica Churner", plays:"Not 6,249"}]
 
 						- songs.each do |song|
 							%li.span12
-								%p 
+								.caption
 									%i.icon-play
 									%b= song[:song]										
 									%span.song= " - Love Me " + song[:plays] + " plays"
@@ -46,13 +46,14 @@
 					%p
 						%i.icon-globe
 						%a www.jessicademo.com
-					.span4.well{style:"margin-left: 0px;"}
+
+					.well{style:"margin-left: 0px;"}
 						%h5 88
 						%p Fans
-					.span4.well
+					.well
 						%h5 4753
 						%p Following
-					.span4.well
+					.well
 						%h5 28963
 						%p Followers
 				.row-fluid.newest-fans
