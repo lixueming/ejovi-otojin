@@ -3,23 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-span.num-badge {
-	border-radius: 20px 20px 20px 20px;
-	width: 32px;
-	height: 24px;
-	text-align: center;
-	border-style: solid;
-	border-width: 1px 1px 1px 1px;
-	border-color: #ccc;
-	padding-top: 5px;
-	
-	font-size: 200;
-	margin-top: 15px;
-	font-weight: bold;
-	color: #444;
-}
-
-
 ul.thumbnails.thumb-list{
 	li{		
 		border-style: solid;
@@ -82,7 +65,7 @@ ul.thumbnails.thumb-list{
 				a {
 					border-style: solid;
 					border-width: 1px 1px 1px 1px;
-					border-color: #ddd;					
+					border-color: #ddd;
 					margin-right: 5px;
 					padding-top: 10px;
 					height: 24px;
@@ -106,35 +89,42 @@ ul.thumbnails.thumb-list{
 
 
 .row.desktop-home {
-	.container {
-		.banner{
+	.container {		
+		.home-banner{
 			background: image_url("home_banner.png") no-repeat 0 0;
 			height: 100%;
 			width: 100%;
+			margin-left: -20px;
+			margin-right: -20px;
 
 			h1{
-				margin-top: 180px;
-				font-size: 420%;
+				margin-top: 150px;
+				font-size: 300%;
 				color: white;
 				text-align: center;
 				font-weight: 900;
 			}
 			p {
-				margin-top: 20px;
+				height: 90px;
+				margin-top: 10px;
 				color: #908f8f;
 				text-align: center;
-				font-size: 135%;
+				font-size: 110%;
 				line-height: 1.3em;
+				clear: both;
 			}
-			button.btn.btn-large.btn-primary {
-				margin-top: 23px;
-				font-weight: 900;
+		}
+		.join-now {
+			button.btn.btn-large.btn-primary {				
+				margin-top: -25px;
+				font-weight: 900;				
 				width: 180px;
 
 			}
 		}
 
 		.row.content {
+
 			margin-top: 50px;
 			h3 {
 				font-weight: 900;
@@ -177,45 +167,10 @@ ul.thumbnails.thumb-list{
 }
 
 .row.desktop-artists {
-	.row-fluid.heading{
-			
-			padding-top: 20px;
-			padding-left: 10px;
-			padding-bottom: 20px;
-
-			background-color: #008dde;			
-
-		.container {
-			h1{
-				font-size: 300%;
-				color: white;
-				font-weight: 900;
-			}
-			.span6 {
-				padding-top: 10px;
-				p {
-					padding-top: 10px;
-					margin-bottom:0px;
-				}
-			}
-		}
-	}
-	.container {			
+	.container {
 		.content {
 			margin-top: 30px;
 			.left-content {
-				.row-fluid.filter {
-					background-color: #ececec;
-					padding: 15px 0px 15px 20px;
-					width: 98%;
-
-					span {
-
-					}
-					.btn-group {						
-						margin-left: 20px;
-					}
-				}
 				.row-fluid.most-list {
 					margin-top: 20px;
 				}
@@ -234,20 +189,6 @@ ul.thumbnails.thumb-list{
 }
 
 .row.desktop-about-artist {
-	.row-fluid.heading{			
-			padding-top: 20px;
-			padding-left: 10px;
-			padding-bottom: 20px;
-			background-color: #008dde;			
-
-		.container {
-			h1{
-				font-size: 300%;
-				color: white;
-				font-weight: 900;
-			}
-		}
-	}
 	.container {
 		.content {
 			margin-top: 30px;
@@ -359,45 +300,10 @@ ul.thumbnails.thumb-list{
 
 
 .row.desktop-songs {
-	.row-fluid.heading{
-			
-			padding-top: 20px;
-			padding-left: 10px;
-			padding-bottom: 20px;
-
-			background-color: #008dde;			
-
-		.container {
-			h1{
-				font-size: 300%;
-				color: white;
-				font-weight: 900;
-			}
-			.span6 {
-				padding-top: 10px;
-				p {
-					padding-top: 10px;
-					margin-bottom:0px;
-				}
-			}
-		}
-	}
-	.container {			
-		.content {
+	.container {
+		.content {		
 			margin-top: 30px;
 			.left-content {
-				.row-fluid.filter {
-					background-color: #ececec;
-					padding: 15px 0px 15px 20px;
-					width: 98%;
-
-					span {
-
-					}
-					.btn-group {						
-						margin-left: 20px;
-					}
-				}
 				.row-fluid.most-list {
 					margin-top: 20px;
 				}
@@ -419,25 +325,8 @@ ul.thumbnails.thumb-list{
 
 
 .row.desktop-about-us {
-	.row-fluid.heading{			
-			padding-top: 20px;
-			padding-left: 10px;
-			padding-bottom: 20px;
-
-			background-color: #008dde;			
-
-		.container {
-			h1{
-				font-size: 250%;
-				color: white;
-				font-weight: 900;
-			}
-			p {
-				color: #ddd;
-			}
-		}
-	}
-	.container {			
+	.container {
+		
 		.content {
 			margin-top: 30px;
 			.row-fluid.most-list {
@@ -460,5 +349,4 @@ ul.thumbnails.thumb-list{
 		}
 	}
 }
-
 

@@ -11,15 +11,14 @@
 					= tab_tag('Songs', home_songs_path)
 					= tab_tag('Artists', home_artists_path)
 					= tab_tag('About Us', home_about_us_path)
-				%ul.nav.pull-right
-					%li
-						%a.icon-facebook{href: "http://facebook.com"}
-					%li
-						%a.icon-twitter{href: "http://twitter.com"}
-					%li
-						%a.icon-rss{href: "http://rss.com"}
-					%li.search
-						%form.navbar-form.pull-right
-							%input.icon-search{type:"text", placeholder: "Search"}
+			
+				.social.pull-right					
+					%a.icon-facebook{href: "http://facebook.com"}
+					%a.icon-twitter{href: "http://twitter.com"}
+					%a.icon-rss{href: "http://rss.com"}
+					.input-append
+						%input{type:"text", placeholder: "Search"}
+						%span.add-on
 							%i.icon-search
+
 							
