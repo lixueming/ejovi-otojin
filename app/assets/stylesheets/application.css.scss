@@ -129,6 +129,7 @@ span.num-badge {
 			box-shadow: none;	
 			border: none;
 			padding-left: 10px;
+			padding-right: 5px;
 			background: none;
 			background-color: #008dde;
 
@@ -136,19 +137,19 @@ span.num-badge {
 				font-size: 250%;
 				color: white;
 				font-weight: 900;
+				float:left;
 			}
-			.span8 {
-				padding-top: 5px;
-				p {
-					padding-top: 10px;
-					margin-bottom:0px;
-					button {
-						margin-top: 10px;
-					}
-				}
-			}
-			p {
+			p.description {
 				color: #ddd;
+				clear: both;
+			}
+			p.pull-right {				
+				padding-top: 10px;
+				margin-bottom:0px;
+				button {
+					margin-top: 0px;
+					margin-bottom: 10px;
+				}
 			}
 		}
 	}
